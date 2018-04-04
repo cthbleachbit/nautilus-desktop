@@ -175,7 +175,7 @@ typedef enum
 #define NAUTILUS_PREFERENCES_SHOW_CREATE_LINK "show-create-link"
 
 /* Full Text Search as default */
-#define NAUTILUS_PREFERENCES_FTS_DEFAULT "fts-default"
+#define NAUTILUS_PREFERENCES_FTS_DEFAULT "fts-enabled"
 
 void nautilus_global_preferences_init                      (void);
 
