@@ -9266,19 +9266,6 @@ thumbnail_limit_changed_callback (gpointer user_data)
 }
 
 static void
-thumbnail_size_changed_callback (gpointer user_data)
-{
-    cached_thumbnail_size = g_settings_get_int (nautilus_icon_view_preferences,
-                                                NAUTILUS_PREFERENCES_ICON_VIEW_THUMBNAIL_SIZE);
-
-    /* Tell the world that icons might have changed. We could invent a narrower-scope
-     * signal to mean only "thumbnails might have changed" if this ends up being slow
-     * for some reason.
-     */
-    emit_change_signals_for_all_files_in_all_directories ();
-}
-
-static void
 show_thumbnails_changed_callback (gpointer user_data)
 {
     show_file_thumbs = g_settings_get_enum (nautilus_preferences, NAUTILUS_PREFERENCES_SHOW_FILE_THUMBNAILS);
@@ -9408,11 +9395,6 @@ nautilus_file_class_init (NautilusFileClass *class)
     g_signal_connect_swapped (nautilus_preferences,
                               "changed::" NAUTILUS_PREFERENCES_FILE_THUMBNAIL_LIMIT,
                               G_CALLBACK (thumbnail_limit_changed_callback),
-                              NULL);
-    thumbnail_size_changed_callback (NULL);
-    g_signal_connect_swapped (nautilus_preferences,
-                              "changed::" NAUTILUS_PREFERENCES_ICON_VIEW_THUMBNAIL_SIZE,
-                              G_CALLBACK (thumbnail_size_changed_callback),
                               NULL);
     show_thumbnails_changed_callback (NULL);
     g_signal_connect_swapped (nautilus_preferences,

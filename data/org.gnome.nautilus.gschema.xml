@@ -238,11 +238,6 @@
       <summary>Default icon zoom level</summary>
       <description>Default zoom level used by the icon view.</description>
     </key>
-    <key type="i" name="thumbnail-size">
-      <default>64</default>
-      <summary>Default Thumbnail Icon Size</summary>
-      <description>The default size of an icon for a thumbnail in the icon view when using NAUTILUS_ICON_SIZE_STANDARD size.</description>
-    </key>
     <key type="as" name="text-ellipsis-limit">
       <default>[ '3' ]</default>
       <summary>Text Ellipsis Limit</summary>
