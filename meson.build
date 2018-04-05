@@ -99,6 +99,10 @@ conf.set_quoted('LOCALEDIR', join_paths(prefix, get_option('localedir')))
 conf.set_quoted('NAUTILUS_DATADIR', join_paths(datadir, 'nautilus'))
 conf.set_quoted('NAUTILUS_EXTENSIONDIR', join_paths(prefix, extensiondir))
 
+if get_option ('enable-desktop')
+    conf.set10 ('ENABLE_DESKTOP', true)
+endif
+
 if get_option('packagekit')
   conf.set10('ENABLE_PACKAGEKIT', true)
 endif
@@ -130,6 +134,11 @@ endif
 if get_option('extensions')
   subdir('extensions')
 endif
+
+if get_option ('enable-desktop')
+    subdir ('nautilus-desktop')
+endif
+
 
 # Compile GSettings schemas when installing from source.
 meson.add_install_script('build-aux/meson/postinstall.py')

@@ -135,8 +135,21 @@ typedef enum
 	NAUTILUS_SIMPLE_SEARCH_BAR
 } NautilusSearchBarMode;
 
+#define NAUTILUS_PREFERENCES_DESKTOP_FONT                  "font"
+#define NAUTILUS_PREFERENCES_DESKTOP_HOME_VISIBLE          "home-icon-visible"
+#define NAUTILUS_PREFERENCES_DESKTOP_HOME_NAME             "home-icon-name"
+#define NAUTILUS_PREFERENCES_DESKTOP_TRASH_VISIBLE         "trash-icon-visible"
+#define NAUTILUS_PREFERENCES_DESKTOP_TRASH_NAME            "trash-icon-name"
+#define NAUTILUS_PREFERENCES_DESKTOP_VOLUMES_VISIBLE       "volumes-visible"
+#define NAUTILUS_PREFERENCES_DESKTOP_NETWORK_VISIBLE       "network-icon-visible"
+#define NAUTILUS_PREFERENCES_DESKTOP_NETWORK_NAME          "network-icon-name"
+#define NAUTILUS_PREFERENCES_DESKTOP_BACKGROUND_FADE       "background-fade"
+
 /* Lockdown */
 #define NAUTILUS_PREFERENCES_LOCKDOWN_COMMAND_LINE         "disable-command-line"
+
+/* Desktop background */
+#define NAUTILUS_PREFERENCES_SHOW_DESKTOP                  "show-desktop-icons"
 
 /* Recent files */
 #define NAUTILUS_PREFERENCES_RECENT_FILES_ENABLED          "remember-recent-files"
@@ -163,6 +176,7 @@ extern GSettings *nautilus_preferences;
 extern GSettings *nautilus_compression_preferences;
 extern GSettings *nautilus_icon_view_preferences;
 extern GSettings *nautilus_list_view_preferences;
+extern GSettings *nautilus_desktop_preferences;
 extern GSettings *nautilus_window_state;
 extern GSettings *gtk_filechooser_preferences;
 extern GSettings *gnome_lockdown_preferences;

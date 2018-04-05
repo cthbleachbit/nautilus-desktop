@@ -34,6 +34,11 @@ typedef guint eel_boolean_bit;
 gboolean    eel_g_lists_sort_and_check_for_intersection (GList                **list_a,
 							 GList                **list_b);
 
+/* GHashTable functions */
+void        eel_g_hash_table_safe_for_each              (GHashTable            *hash_table,
+							 GHFunc                 callback,
+							 gpointer               callback_data);
+
 /* NULL terminated string arrays (strv). */
 gboolean    eel_g_strv_equal                            (char                 **a,
 							 char                 **b);

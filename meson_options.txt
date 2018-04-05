@@ -1,6 +1,8 @@
 option('docs', type: 'boolean', value: false)
+option ('enable-desktop', type: 'boolean', value: true)
 option('profiling', type: 'boolean', value: false)
 option('extensions', type: 'boolean', value: true)
 option('packagekit', type: 'boolean', value: true)
 option('selinux', type: 'boolean', value: false)
 option('display-tests', type: 'boolean', value: false)
+

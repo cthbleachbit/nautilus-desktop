@@ -68,6 +68,12 @@ eel_uri_is_other_locations (const char *uri)
 }
 
 gboolean
+eel_uri_is_desktop (const char *uri)
+{
+    return g_str_has_prefix (uri, EEL_DESKTOP_URI);
+}
+
+gboolean
 eel_uri_is_in_xdg_dirs (const gchar *uri)
 {
     GUserDirectory dir;
